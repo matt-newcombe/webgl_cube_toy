@@ -1,3 +1,6 @@
 [submodule "toy_unity/Packages/com.mattn.gitcmdline"]
 	path = toy_unity/Packages/com.mattn.gitcmdline
 	url = git@github.com:matt-newcombe/unity-git-command-line-tool.git
+[submodule "toy_unity/Packages/com.mattn.projectversioning"]
+	path = toy_unity/Packages/com.mattn.projectversioning
+	url = git@github.com:matt-newcombe/com.mattn.projectversioning.git
