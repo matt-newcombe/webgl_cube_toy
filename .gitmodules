@@ -1,0 +1,3 @@
+[submodule "toy_unity/Packages/com.mattn.gitcmdline"]
+	path = toy_unity/Packages/com.mattn.gitcmdline
+	url = git@github.com:matt-newcombe/unity-git-command-line-tool.git
