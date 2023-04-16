@@ -1,0 +1,8 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:VisualElement name="BottomJustify" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: flex-end;">
+        <ui:VisualElement name="VersionInfobG" style="background-image: url(&apos;project://database/Assets/_textures/Rounded_Rect_10px.png?fileID=2800000&amp;guid=c4f7f8debbcf3cf4faf280628cab55f9&amp;type=3#Rounded_Rect_10px&apos;); -unity-slice-left: 10; -unity-slice-top: 10; -unity-slice-right: 10; -unity-background-image-tint-color: rgba(0, 0, 0, 0.28); -unity-slice-bottom: 10; align-items: auto; align-self: flex-start; transform-origin: center;">
+            <ui:Label tabindex="-1" text="Label" display-tooltip-when-elided="true" name="VersionInfo" style="align-self: center; font-size: 30px; -unity-font-definition: url(&apos;project://database/Assets/TextMesh%20Pro/Fonts/LiberationSans.ttf?fileID=12800000&amp;guid=e3265ab4bf004d28a9537516768c1c75&amp;type=3#LiberationSans&apos;); color: rgb(0, 255, 153);" />
+        </ui:VisualElement>
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+    </ui:VisualElement>
+</ui:UXML>
