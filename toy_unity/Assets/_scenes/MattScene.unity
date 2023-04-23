@@ -9251,6 +9251,7 @@ GameObject:
   - component: {fileID: 268792489}
   - component: {fileID: 268792488}
   - component: {fileID: 268792490}
+  - component: {fileID: 268792491}
   m_Layer: 5
   m_Name: UIDocument
   m_TagString: Untagged
@@ -9307,6 +9308,24 @@ MonoBehaviour:
   DisplayBuildTime: 1
   DisplayBuildMachineName: 1
   DisplayGitCommitShortHash: 0
+--- !u!114 &268792491
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 268792487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: bde76563a604949ecb309831011a397d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  Document: {fileID: 268792488}
+  DebugShowHideKeyCode: 100
+  ElementName: FPSLabel
+  OnScreenClass: rightJustified--OnScreen
+  OffScreenClass: rightJustified--OffScreen
+  Shown: 0
 --- !u!1 &270212537
 GameObject:
   m_ObjectHideFlags: 0

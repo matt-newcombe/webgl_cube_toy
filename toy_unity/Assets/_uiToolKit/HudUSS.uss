@@ -1,0 +1,11 @@
+.rightJustified--OnScreen {
+    right: 0;
+    transition-duration: 1s;
+    transition-timing-function: ease-out-elastic;
+}
+
+.rightJustified--OffScreen {
+    right: -100px;
+    transition-duration: 0.25s;
+    transition-timing-function: ease-out-elastic;
+}

@@ -18,7 +18,7 @@ public class SetVersionInfoLabel : MonoBehaviour
     private void Start()
     {
         _document = GetComponent<UIDocument>();
-        _versionInfoLabel = _document.rootVisualElement.Q<Label>("VersionInfo");
+        _versionInfoLabel = _document.rootVisualElement.Q<VisualElement>("VersionInfo").Q<Label>();
         _versionInfoLabel.text  = ConcatInfo();
     }
 

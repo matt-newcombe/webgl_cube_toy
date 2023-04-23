@@ -1,0 +1,27 @@
+VisualElement#Name:hover {
+    border-left-color: rgb(0, 199, 255);
+    border-right-color: rgb(0, 199, 255);
+    border-top-color: rgb(0, 199, 255);
+    border-bottom-color: rgb(0, 199, 255);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    transition-timing-function: ease-in-out-sine;
+    transition-duration: 2s;
+    transition-property: all;
+    left: 50px;
+}
+
+.test {
+    border-left-color: rgb(255, 0, 0);
+    border-right-color: rgb(255, 0, 0);
+    border-top-color: rgb(255, 0, 0);
+    border-bottom-color: rgb(255, 0, 0);
+    border-left-width: 4px;
+    border-right-width: 4px;
+    border-top-width: 4px;
+    border-bottom-width: 4px;
+    flex-grow: 1;
+    left: 0;
+}

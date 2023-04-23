@@ -1,0 +1,11 @@
+<ui:UXML xmlns:ui="UnityEngine.UIElements" xmlns:uie="UnityEditor.UIElements" xsi="http://www.w3.org/2001/XMLSchema-instance" engine="UnityEngine.UIElements" editor="UnityEditor.UIElements" noNamespaceSchemaLocation="../UIElementsSchema/UIElements.xsd" editor-extension-mode="False">
+    <ui:Template name="UI_ShadedTextTemplate" src="project://database/Assets/_uiToolKit/_elements/UI_ShadedTextElement.uxml?fileID=9197481963319205126&amp;guid=c1a2c21d046ff489fb91ba96ed719c05&amp;type=3#UI_ShadedTextElement" />
+    <Style src="project://database/Assets/_uiToolKit/HudUSS.uss?fileID=7433441132597879392&amp;guid=94ef8498f32414c5b899aa082fb24295&amp;type=3#HudUSS" />
+    <ui:VisualElement name="BottomJustify" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: flex-start; transition-property: opacity; transition-duration: 1s; transition-timing-function: ease-in-out-circ;">
+        <ui:VisualElement name="TopBlock" style="flex-grow: 1; background-color: rgba(0, 0, 0, 0); justify-content: flex-end; align-items: auto; flex-direction: row;">
+            <ui:Instance template="UI_ShadedTextTemplate" name="FPSLabel" class="rightJustified--OnScreen" style="align-self: flex-start;" />
+        </ui:VisualElement>
+        <ui:Instance template="UI_ShadedTextTemplate" name="VersionInfo" />
+        <ui:Button text="Button" display-tooltip-when-elided="true" />
+    </ui:VisualElement>
+</ui:UXML>
