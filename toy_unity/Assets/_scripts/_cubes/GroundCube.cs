@@ -10,7 +10,8 @@ public class GroundCube : MonoBehaviour
 
     public float MinRandWait = 0.1f;
     public float MaxRandWait = 1f;
-    
+
+    private Rigidbody _rigidbody;
 
     private Vector3 _chasePos;
     private bool _falling = false;
@@ -19,6 +20,7 @@ public class GroundCube : MonoBehaviour
     {
         spring.Init(transform.position);
         StartCoroutine(WaitForFall());
+        _rigidbody = GetComponent<Rigidbody>();
     }
 
     private IEnumerator WaitForFall()
@@ -33,12 +35,13 @@ public class GroundCube : MonoBehaviour
         _chasePos = chasePos;
     }
     
-    void Update()
+    void FixedUpdate()
     {
         if (_falling)
         {
-            Vector3 currPos = spring.MoveTowards(_chasePos, 0f);
-            transform.position = currPos;
+            spring.ForcePositionOverride(transform.position);
+            Vector3 target = spring.MoveTowards(_chasePos, 0f);
+            _rigidbody.MovePosition(target);
         }
     }
 }

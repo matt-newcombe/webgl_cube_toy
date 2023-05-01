@@ -5,11 +5,17 @@ using UnityEngine;
 
 public class PickupCubeInputHandler : MonoBehaviour
 {
+    public float explosionForce = 1f;
+    public float explosionRadius = 10f;
+    
     public Camera MousePickCamera;
     public float HeightAboveCubeField = 2f;
     
     private GroundCube _touchCube;
     private Vector3 _cubeStartPos;
+
+    public Transform CubeParent;
+    private Rigidbody[] _cubes;
     
     enum State
     {
@@ -18,6 +24,11 @@ public class PickupCubeInputHandler : MonoBehaviour
     }
 
     private State _state = State.Released;
+
+    private void Start()
+    {
+        _cubes = CubeParent.GetComponentsInChildren<Rigidbody>();
+    }
     
     private void Update()
     {
@@ -35,7 +46,8 @@ public class PickupCubeInputHandler : MonoBehaviour
                 // On Left Click
                 if (Input.GetMouseButtonDown(0))
                 {
-                    MousePickCube();
+                    Impulse(GetTouchOnPlane());
+                  //  MousePickCube();
                 }
                 break;
             default:
@@ -79,5 +91,13 @@ public class PickupCubeInputHandler : MonoBehaviour
     {
         _touchCube.SetChasePos(_cubeStartPos);
         _state = State.Released;
+    }
+
+    private void Impulse(Vector3 pos)
+    {
+        foreach (var cube in _cubes)
+        {
+            cube.AddExplosionForce(explosionForce, pos, explosionRadius);
+        }   
     }
 }

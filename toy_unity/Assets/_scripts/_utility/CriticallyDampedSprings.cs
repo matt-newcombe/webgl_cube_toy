@@ -21,6 +21,13 @@ public class VecSpringDamp
         SetHalfLife(HalfLife);
     }
 
+    public void ForcePositionOverride(Vector3 pos)
+    {
+        x.SetPos(pos.x);
+        y.SetPos(pos.y);
+        z.SetPos(pos.z);
+    }
+
     public Vector3 MoveTowards(Vector3 target, float goalVelocity)
     {
         SetFrequency(Frequency);
@@ -61,9 +68,14 @@ public class FloatSpringDamp
         x = initPos;
     }
 
+    public void SetPos(float pos)
+    {
+        x = pos;
+    }
+
     public float MoveTowards(float goal, float goalVelocity)
     {
-        damper_spring(goal, goalVelocity, Frequency, HalfLife, Time.deltaTime);
+        damper_spring(goal, goalVelocity, Frequency, HalfLife, Time.fixedDeltaTime);
         return x;
     }
     
