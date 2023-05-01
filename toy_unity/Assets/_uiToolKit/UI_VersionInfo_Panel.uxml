@@ -6,6 +6,5 @@
             <ui:Instance template="UI_ShadedTextTemplate" name="FPSLabel" class="rightJustified--OnScreen" style="align-self: flex-start;" />
         </ui:VisualElement>
         <ui:Instance template="UI_ShadedTextTemplate" name="VersionInfo" />
-        <ui:Button text="Button" display-tooltip-when-elided="true" />
     </ui:VisualElement>
 </ui:UXML>
