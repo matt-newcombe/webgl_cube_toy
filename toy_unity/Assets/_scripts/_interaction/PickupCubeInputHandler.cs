@@ -47,7 +47,7 @@ public class PickupCubeInputHandler : MonoBehaviour
                 if (Input.GetMouseButtonDown(0))
                 {
                     Impulse(GetTouchOnPlane());
-                  //  MousePickCube();
+                    MousePickCube();
                 }
                 break;
             default:
@@ -61,8 +61,9 @@ public class PickupCubeInputHandler : MonoBehaviour
         Vector3 worldPoint = GetTouchOnPlane();
         
         // Now find the cube at that point - we can do this with a logical structure, but I'm feeling lazy so let's raycast again
+        Ray mouseRay = MousePickCamera.ScreenPointToRay(Input.mousePosition);
         Ray downRay = new Ray(worldPoint, Vector3.down);
-        Physics.Raycast(downRay, out RaycastHit hitInfo);
+        Physics.SphereCast(mouseRay, 0.15f, out RaycastHit hitInfo);
         Debug.DrawRay(downRay.origin, downRay.direction*5f, Color.green, 8f);
 
         Transform cubeHit = hitInfo.transform;

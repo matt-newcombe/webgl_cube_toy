@@ -66,3 +66,4 @@ crashlytics-build.properties
 *.dwlt
 */UserSettings/
 toy_unity/Assets/Resources/VersionInfo.asset
+toy_recordings/
